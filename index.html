@@ -3,81 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Busca na Floresta</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>A Lenda da Taça Invicta</title>
 </head>
 <body>
-    <main>
-        <div class="passo ativo" id="passo-0">
-            <p>Você é um jovem talento do futebol. Um dia, recebe um convite misterioso para se juntar a um time lendário em busca da "Taça Invicta", um troféu que desapareceu há décadas. O convite pede para você escolher o tipo de teste inicial:</p>
-            <button class="btn-proximo" data-proximo="1">Teste Físico (Resistência e Velocidade)</button>
-            <button class="btn-proximo" data-proximo="2">Teste Tático (Visão de Jogo e Passes)</button>
-        </div>
+    <div id="game-container">
+        <h1>A Busca na Floresta</h1>
+        
+        <p id="story-text">Você acorda no meio de uma floresta escura. O que você faz?</p>
+        
+        <div id="options-container">
+            </div>
 
-        <div class="passo" id="passo-1">
-            <p>Seu teste físico é um sprint de 100 metros e um treino de resistência de 1 hora. Você precisa mostrar garra até o fim. O treinador pergunta: "Qual é a sua motivação para vencer o cansaço?"</p>
-            <button class="btn-proximo" data-proximo="3">Dizer que quer ser o maior artilheiro da história</button>
-            <button class="btn-proximo" data-proximo="4">Dizer que quer provar seu valor para a família</button>
-        </div>
+        <button id="restart-button" onclick="startGame()" style="display:none;">Recomeçar</button>
+    </div>
 
-        <div class="passo" id="passo-2">
-            <p>Em um treino de posicionamento, o time precisa fazer um gol em 3 passes, mas a defesa adversária é forte. Você está com a bola. Qual jogada você tenta?</p>
-            <button class="btn-proximo" data-proximo="5">Lançar um passe longo e arriscado para o atacante</button>
-            <button class="btn-proximo" data-proximo="6">Manter a posse e buscar uma tabela curta com o meio-campo</button>
-        </div>
-
-        <div class="passo" id="passo-3">
-            <p>Sua ambição impressiona o técnico. Ele diz: "Ótimo! Sua sede por gols o fará um atacante implacável. Próxima missão: Achar o mapa para o Estádio Oculto!"</p>
-            <button class="btn-proximo" data-proximo="7">Investigar o arquivo de vídeos antigos do clube</button>
-        </div>
-
-        <div class="passo" id="passo-4">
-            <p>A pressão de provar seu valor é grande demais. Você tem medo de falhar e decide se contentar com ligas menores. O time segue sem você, mas a dúvida do que teria acontecido sempre o assombra.</p>
-        </div>
-
-        <div class="passo" id="passo-5">
-            <p>Seu passe longo arriscado surpreende a defesa e resulta em gol! Você mostra audácia. O técnico ordena: "Siga para a biblioteca municipal! Há um livro de táticas antigas com uma pista!"</p>
-            <button class="btn-proximo" data-proximo="7">Ir para a biblioteca municipal</button>
-        </div>
-
-        <div class="passo" id="passo-6">
-            <p>A defesa intercepta a tabela curta e rouba a bola! O técnico critica sua falta de criatividade. Você precisa de outra chance.</p>
-            <button class="btn-proximo" data-proximo="8">Pedir ao técnico para refazer o teste físico</button>
-        </div>
-
-        <div class="passo" id="passo-7">
-            <p>No arquivo de vídeos (ou na biblioteca), você encontra uma pista: a Taça Invicta está escondida no **"Campo das Duas Torres"**. Para chegar lá, você deve escolher entre dois caminhos:</p>
-            <button class="btn-proximo" data-proximo="9">Pegar o caminho da montanha (Mais rápido, mas traiçoeiro)</button>
-            <button class="btn-proximo" data-proximo="10">Pegar o caminho do vale (Mais seguro, mas longo)</button>
-        </div>
-
-        <div class="passo" id="passo-8">
-            <p>Você passa no teste físico com louvor, mostrando dedicação. Agora, para encontrar a pista. O técnico te manda para os arquivos.</p>
-            <button class="btn-proximo" data-proximo="7">Ir para o arquivo de vídeos antigos do clube</button>
-        </div>
-
-        <div class="passo" id="passo-9">
-            <p>Você enfrenta o caminho da montanha. O atalho funciona! Você chega primeiro e, dentro de um vestiário antigo, encontra a Taça Invicta escondida sob o escudo original do clube!</p>
-            <button class="btn-proximo" data-proximo="11">Levantar a Taça!</button>
-        </div>
-
-        <div class="passo" id="passo-10">
-            <p>O caminho do vale é seguro, mas você perde um tempo crucial. Ao chegar, percebe que o time rival já está no Campo das Duas Torres! Você tem uma última chance de impedir o roubo.</p>
-            <button class="btn-proximo" data-proximo="12">Desafiar o time rival para uma disputa de pênaltis pela posse da Taça</button>
-        </div>
-
-        <div class="passo" id="passo-11">
-            <p>Você levanta a Taça Invicta! A lenda se torna realidade. Você é a peça-chave que faltava no time. Sua foto entra para a história e o clube volta ao topo do futebol mundial!</p>
-        </div>
-
-        <div class="passo" id="passo-12">
-            <p>A disputa é intensa. A última cobrança é sua! Você converte o pênalti com perfeição! O time rival é forçado a recuar e a Taça está salva!</p>
-            <button class="btn-proximo" data-proximo="11">Levantar a Taça!</button>
-        </div>
-    </main>
     <script src="script.js"></script>
 </body>
 </html>
